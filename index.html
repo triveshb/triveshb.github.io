@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trivesh Babboo — ACA Chartered Accountant working across financial reporting, performance, and finance transformation.">
+  <meta name="theme-color" content="#f5f4f0">
+  <title>Trivesh Babboo — Finance, Strategy & Transformation</title>
+  <style>
+    :root {
+      --paper: #f5f4f0;
+      --ink: #17231f;
+      --muted: #68736d;
+      --line: #d9ddd6;
+      --green: #34594b;
+      --pale: #e7ece6;
+      --white: #fffefa;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+    .wrap { width: min(var(--max), calc(100% - 56px)); margin: 0 auto; }
+    .topbar { height: 82px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    .brand { font-size: 14px; letter-spacing: -.02em; font-weight: 650; }
+    .brand span { color: var(--green); }
+    nav { display: flex; align-items: center; gap: 30px; font-size: 12px; color: var(--muted); }
+    nav a:hover { color: var(--ink); }
+    .nav-cta { border: 1px solid var(--line); padding: 11px 15px; border-radius: 2px; color: var(--ink); }
+    .hero { padding: 112px 0 104px; display: grid; grid-template-columns: 1.45fr .55fr; gap: 80px; align-items: end; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--green); text-transform: uppercase; letter-spacing: .16em; font-size: 10px; font-weight: 700; }
+    .eyebrow:before { content: ""; width: 24px; height: 1px; background: var(--green); }
+    h1 { font-family: var(--serif); font-weight: 400; letter-spacing: -.055em; font-size: clamp(58px, 8vw, 104px); line-height: .98; margin: 27px 0 25px; }
+    h1 em { color: var(--green); font-weight: 400; }
+    .hero-copy { max-width: 620px; font-size: 17px; line-height: 1.75; color: #59645e; }
+    .hero-actions { display: flex; gap: 12px; align-items: center; margin-top: 34px; }
+    .button { display: inline-flex; align-items: center; gap: 20px; padding: 15px 18px; background: var(--green); color: white; font-size: 12px; letter-spacing: .02em; border: 1px solid var(--green); transition: .2s ease; }
+    .button:hover { background: #243f35; }
+    .button.secondary { background: transparent; color: var(--ink); border-color: var(--line); }
+    .button.secondary:hover { border-color: var(--green); }
+    .hero-aside { border-left: 1px solid var(--line); padding: 10px 0 8px 27px; }
+    .aside-label { color: var(--muted); text-transform: uppercase; letter-spacing: .13em; font-size: 9px; margin-bottom: 12px; }
+    .aside-value { font-family: var(--serif); font-size: 25px; line-height: 1.25; margin-bottom: 29px; }
+    .aside-small { color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .ticker { background: var(--ink); color: #e9eee8; padding: 19px 0; }
+    .ticker-inner { display: flex; justify-content: space-between; gap: 22px; flex-wrap: wrap; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; color: #c5d0c8; }
+    .ticker b { color: white; font-weight: 500; }
+    section { padding: 104px 0; border-bottom: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: .55fr 1.45fr; gap: 50px; margin-bottom: 54px; }
+    .section-index { color: var(--green); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; padding-top: 11px; }
+    h2 { font-family: var(--serif); font-size: clamp(38px, 5vw, 58px); letter-spacing: -.04em; line-height: 1.08; font-weight: 400; margin: 0; max-width: 720px; }
+    .section-intro { color: var(--muted); line-height: 1.8; font-size: 14px; max-width: 620px; margin: 20px 0 0; }
+    .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; }
+    .about-note { background: var(--pale); padding: 32px; min-height: 260px; display: flex; flex-direction: column; justify-content: space-between; }
+    .about-note .monogram { font-family: var(--serif); font-size: 74px; color: var(--green); letter-spacing: -.08em; }
+    .about-note p { font-size: 12px; line-height: 1.7; color: #53635a; max-width: 250px; margin: 0; }
+    .about-text p { margin: 0 0 18px; color: #59645e; font-size: 15px; line-height: 1.85; }
+    .about-text strong { color: var(--ink); font-weight: 600; }
+    .capabilities { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .capability { padding: 28px 25px 30px; min-height: 185px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .capability .num { color: var(--green); font-size: 10px; letter-spacing: .1em; }
+    .capability h3 { font-family: var(--serif); font-size: 24px; font-weight: 400; margin: 25px 0 10px; }
+    .capability p { color: var(--muted); font-size: 12px; line-height: 1.7; margin: 0; }
+    .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .work-card { background: var(--white); border: 1px solid var(--line); padding: 29px; min-height: 245px; display: flex; flex-direction: column; justify-content: space-between; }
+    .work-top { display: flex; justify-content: space-between; color: var(--green); font-size: 10px; text-transform: uppercase; letter-spacing: .12em; }
+    .work-card h3 { font-family: var(--serif); font-weight: 400; font-size: 30px; letter-spacing: -.025em; margin: 40px 0 10px; }
+    .work-card p { color: var(--muted); font-size: 13px; line-height: 1.7; max-width: 420px; margin: 0; }
+    .work-foot { color: #8a948e; font-size: 10px; margin-top: 24px; }
+    .timeline { border-top: 1px solid var(--line); }
+    .role { display: grid; grid-template-columns: .55fr 1.45fr; gap: 50px; padding: 27px 0; border-bottom: 1px solid var(--line); }
+    .role-date { color: var(--muted); font-size: 11px; padding-top: 5px; }
+    .role h3 { margin: 0 0 7px; font-family: var(--serif); font-size: 25px; font-weight: 400; }
+    .role-place { color: var(--green); font-size: 11px; margin-bottom: 11px; }
+    .role p { color: var(--muted); font-size: 13px; line-height: 1.7; margin: 0; max-width: 660px; }
+    .credentials { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+    .credential { border: 1px solid var(--line); padding: 13px 16px; font-size: 11px; color: #58645d; }
+    .insight-band { background: var(--pale); padding: 43px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 35px; }
+    .insight-band h3 { font-family: var(--serif); font-size: 32px; font-weight: 400; margin: 0 0 8px; }
+    .insight-band p { color: var(--muted); font-size: 13px; margin: 0; line-height: 1.7; }
+    .contact { background: var(--ink); color: var(--paper); border: 0; }
+    .contact .section-index { color: #a9c0b1; }
+    .contact h2 { max-width: 800px; }
+    .contact .section-intro { color: #b5c0b9; }
+    .contact-row { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-top: 48px; padding-top: 28px; border-top: 1px solid #425149; }
+    .contact-meta { color: #b5c0b9; font-size: 12px; line-height: 1.8; }
+    .contact .button { background: #e9eee8; border-color: #e9eee8; color: var(--ink); }
+    footer { padding: 24px 0; background: var(--ink); color: #9ba9a0; font-size: 10px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
+    .mobile-menu { display: none; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 36px, var(--max)); }
+      .topbar { height: 70px; }
+      nav { gap: 14px; font-size: 11px; }
+      nav a:not(.nav-cta) { display: none; }
+      .hero { padding: 78px 0 70px; grid-template-columns: 1fr; gap: 45px; }
+      .hero-aside { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; padding-left: 18px; }
+      .aside-value { font-size: 21px; margin-bottom: 12px; }
+      section { padding: 72px 0; }
+      .section-head, .about-grid, .role { grid-template-columns: 1fr; gap: 22px; }
+      .section-head { margin-bottom: 35px; }
+      .capabilities { grid-template-columns: 1fr 1fr; }
+      .capability { min-height: 180px; padding: 22px 17px; }
+      .work-grid { grid-template-columns: 1fr; }
+      .insight-band { grid-template-columns: 1fr; padding: 28px; }
+      .contact-row { align-items: start; flex-direction: column; }
+      .footer-inner { flex-direction: column; }
+    }
+    @media (max-width: 420px) {
+      .capabilities { grid-template-columns: 1fr; }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .button { justify-content: space-between; }
+      h1 { font-size: 58px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="#top">TRIVESH <span>BABBOO</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#work">Selected work</a>
+        <a href="#experience">Experience</a>
+        <a class="nav-cta" href="#contact">Get in touch ↗</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Finance · Strategy · Transformation</div>
+          <h1>Clarity in<br><em>complexity.</em></h1>
+          <p class="hero-copy">I’m Trivesh Babboo, an ACA-qualified finance professional working across financial reporting, group consolidation and finance transformation. I’m interested in how better insight, systems and decision-making help businesses move forward.</p>
+          <div class="hero-actions">
+            <a class="button" href="#work">Explore selected work <span>↗</span></a>
+            <a class="button secondary" href="#about">More about me <span>↓</span></a>
+          </div>
+        </div>
+        <aside class="hero-aside">
+          <div>
+            <div class="aside-label">Professional foundation</div>
+            <div class="aside-value">ICAEW<br>Chartered Accountant</div>
+          </div>
+          <div>
+            <div class="aside-label">Based in</div>
+            <div class="aside-value">Luxembourg</div>
+            <div class="aside-small">Working with an international outlook.</div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <div class="ticker"><div class="wrap ticker-inner">
+    <span><b>01</b> Financial reporting</span><span><b>02</b> Group consolidation</span><span><b>03</b> Performance insight</span><span><b>04</b> Finance transformation</span>
+  </div></div>
+
+  <section id="about"><div class="wrap">
+    <div class="section-head">
+      <div class="section-index">01 / About</div>
+      <div><h2>Grounded in finance.<br>Curious about what’s next.</h2>
+        <p class="section-intro">A finance professional combining a strong accounting foundation with an interest in commercial decision-making, technology and business performance.</p>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div class="about-note">
+        <div class="monogram">TB.</div>
+        <p>Professional discipline, analytical thinking and a continuous-learning mindset.</p>
+      </div>
+      <div class="about-text">
+        <p>My career began in external audit, where I developed a strong grounding in financial statements, controls, accounting standards and working with complex organisations.</p>
+        <p>I now work in group financial reporting and consolidation, with exposure to <strong>IFRS, OneStream EPM, management reporting and lender-related analysis</strong>.</p>
+        <p>My next area of focus is the intersection of finance, strategy and technology: turning financial information into useful insight, improving processes and supporting better business decisions.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="expertise"><div class="wrap">
+    <div class="section-head">
+      <div class="section-index">02 / Expertise</div>
+      <div><h2>A broad finance toolkit.<br>A forward-looking mindset.</h2>
+        <p class="section-intro">The foundations I bring today, alongside the capabilities I’m deliberately developing for the next stage of my career.</p>
+      </div>
+    </div>
+    <div class="capabilities">
+      <article class="capability"><div class="num">01 — REPORTING</div><h3>Financial reporting</h3><p>IFRS, financial statements, reporting quality and technical accounting.</p></article>
+      <article class="capability"><div class="num">02 — CONSOLIDATION</div><h3>Group finance</h3><p>Group consolidation, intercompany processes and multi-entity reporting.</p></article>
+      <article class="capability"><div class="num">03 — SYSTEMS</div><h3>Finance transformation</h3><p>OneStream EPM exposure, process improvement and reporting systems.</p></article>
+      <article class="capability"><div class="num">04 — PERFORMANCE</div><h3>Business performance</h3><p>Developing capability in budgeting, forecasting, variance analysis and KPIs.</p></article>
+      <article class="capability"><div class="num">05 — ANALYTICS</div><h3>Data & visualisation</h3><p>Building practical skills in Power BI, data modelling and decision-focused dashboards.</p></article>
+      <article class="capability"><div class="num">06 — AUTOMATION</div><h3>Technology in finance</h3><p>Exploring Python, workflow automation and responsible AI applications in finance.</p></article>
+    </div>
+  </div></section>
+
+  <section id="work"><div class="wrap">
+    <div class="section-head">
+      <div class="section-index">03 / Selected work</div>
+      <div><h2>Evidence over adjectives.</h2>
+        <p class="section-intro">A growing collection of practical work demonstrating how I approach financial problems, communicate insight and improve processes. These are project slots for work to add as it is completed and approved for public sharing.</p>
+      </div>
+    </div>
+    <div class="work-grid">
+      <article class="work-card"><div class="work-top"><span>Case study 01</span><span>Financial modelling</span></div><div><h3>Integrated financial model</h3><p>A structured model connecting operating assumptions, financial statements, scenarios and performance drivers.</p><div class="work-foot">PLANNED PROJECT · DETAILS TO BE ADDED</div></div></article>
+      <article class="work-card"><div class="work-top"><span>Case study 02</span><span>Data & visualisation</span></div><div><h3>Performance dashboard</h3><p>A decision-oriented dashboard translating financial and operational data into clear KPIs and variance insights.</p><div class="work-foot">PLANNED PROJECT · DETAILS TO BE ADDED</div></div></article>
+      <article class="work-card"><div class="work-top"><span>Case study 03</span><span>Automation</span></div><div><h3>Finance workflow automation</h3><p>A practical exploration of reducing repetitive finance tasks through Python and controlled automation.</p><div class="work-foot">PLANNED PROJECT · DETAILS TO BE ADDED</div></div></article>
+      <article class="work-card"><div class="work-top"><span>Case study 04</span><span>Business analysis</span></div><div><h3>Commercial performance review</h3><p>An analysis of business performance, key drivers, risks and recommendations for management action.</p><div class="work-foot">PLANNED PROJECT · DETAILS TO BE ADDED</div></div></article>
+    </div>
+  </div></section>
+
+  <section id="experience"><div class="wrap">
+    <div class="section-head">
+      <div class="section-index">04 / Experience</div>
+      <div><h2>Built on rigorous foundations.</h2><p class="section-intro">A concise overview of the experience and qualification underpinning my work.</p></div>
+    </div>
+    <div class="timeline">
+      <article class="role"><div class="role-date">NOV 2024 — PRESENT</div><div><h3>Senior Financial Reporting Analyst</h3><div class="role-place">Foundever Group SA · Luxembourg</div><p>Group consolidation and financial reporting, IFRS-related work, lender reporting and covenant analysis, net debt reporting, and exposure to OneStream EPM implementation.</p></div></article>
+      <article class="role"><div class="role-date">PREVIOUS EXPERIENCE</div><div><h3>Audit experience</h3><div class="role-place">PwC Mauritius · BDO Mauritius</div><p>Five years of external audit experience, developing a strong foundation in financial reporting, audit methodology, controls and client-facing work.</p></div></article>
+    </div>
+    <div class="credentials"><div class="credential">ICAEW ACA · Chartered Accountant</div><div class="credential">IFRS · Group reporting</div><div class="credential">OneStream EPM · Exposure</div></div>
+  </div></section>
+
+  <section id="insights"><div class="wrap">
+    <div class="insight-band">
+      <div><h3>Ideas in progress.</h3><p>Occasional notes on finance, business performance, technology and the changing role of the finance function.</p></div>
+      <a class="button secondary" href="#contact">Discuss an idea <span>↗</span></a>
+    </div>
+  </div></section>
+
+  <section class="contact" id="contact"><div class="wrap">
+    <div class="section-head">
+      <div class="section-index">05 / Contact</div>
+      <div><h2>Good conversations<br>start with a connection.</h2><p class="section-intro">For professional conversations, collaboration or opportunities, feel free to get in touch.</p></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-meta">Luxembourg<br><span style="color:#87968c">Email and LinkedIn links to be added before launch.</span></div>
+      <a class="button" href="mailto:YOUR_EMAIL@example.com">Start a conversation <span>↗</span></a>
+    </div>
+  </div></section>
+
+  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Trivesh Babboo</span><span>Finance · Strategy · Transformation</span><a href="#top">Back to top ↑</a></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
